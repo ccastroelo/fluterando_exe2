@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
         child: Column(mainAxisAlignment: MainAxisAlignment.end, children: [
           Image.asset(
             'assets/imagens/logo.png',
-            width: 200,
+            width: 150,
           ),
           const SizedBox(
             height: 20,
@@ -82,19 +82,21 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 40,
           ),
           RichText(
             text: const TextSpan(
                 text: "Already have an account? ",
                 style: TextStyle(
+                  color: Colors.white,
                   fontWeight: FontWeight.w500,
                 ),
                 children: <TextSpan>[
                   TextSpan(
                       text: "Sign In",
                       style: TextStyle(
+                        color: Colors.white,
                         fontWeight: FontWeight.bold,
                         decoration: TextDecoration.underline,
                       )),
