@@ -32,14 +32,12 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.black,
       body: Container(
-        padding: EdgeInsets.fromLTRB(12, 16, 12, 16),
+        alignment: Alignment.bottomCenter,
+        padding: const EdgeInsets.fromLTRB(12, 16, 12, 16),
         child: Column(mainAxisAlignment: MainAxisAlignment.end, children: [
-          Row(
-            children: [
-              Expanded(child: Container()),
-              Expanded(child: Image.asset('assets/imagens/logo.png')),
-              Expanded(child: Container()),
-            ],
+          Image.asset(
+            'assets/imagens/logo.png',
+            width: 200,
           ),
           const SizedBox(
             height: 20,
@@ -72,11 +70,18 @@ class _HomePageState extends State<HomePage> {
           const SizedBox(
             height: 60,
           ),
-          const EmailLoginButton(),
-          const SizedBox(
-            height: 12,
+          Container(
+            constraints: BoxConstraints(maxWidth: 700),
+            child: Column(
+              children: const [
+                EmailLoginButton(),
+                SizedBox(
+                  height: 12,
+                ),
+                GoogleLoginButton(),
+              ],
+            ),
           ),
-          const GoogleLoginButton(),
           SizedBox(
             height: 40,
           ),
